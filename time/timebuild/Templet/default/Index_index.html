@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>{$tpte.title}</title>
+<meta name="keywords" content="{$tpte.keywords}"/>
+<meta name="description" content="{$tpte.description}"/>
+<include file="Index:header"/>
+<div class="tpt-wp tpt-pat-75 cl">
+	<div class="tpt-ml-88">
+<link href="/Templet/default/Public/xbktv/ts.css" rel="stylesheet" type="text/css" >
+<script src="/Templet/default/Public/xbktv/jquery.min.js" ></script>
+  <script src="/Templet/default/Public/xbktv/bootstrap.min.js" ></script>
+  <script src="/Templet/default/Public/xbktv/jquery-1.7.2.min.js" ></script>
+  <script type="text/javascript">eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}',16,16,'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'),0,{}))</script>
+<hr>
+	
+	<tbody>
+	   <div class="col-md-14 column">
+    <div class="panel panel-default">
+     <div id="kj" class="panel-body">
+      <iframe src="/Templet/default/Public/vip_js/index.htm" id="player" width="100%" height="500px" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+     </div>
+    </div>
+   </div>
+		<tr>
+   <div class="col-md-14 column">
+    <form method="post" id="khname">
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
+      <select class="form-control input-lg" id="jk">
+<option rel="nofollow" value="{$tptf.alink}">{$tptf.atitle}</option> 
+<option rel="nofollow" value="{$tptf.blink}">{$tptf.btitle}</option>
+<option rel="nofollow" value="{$tptf.clink}">{$tptf.ctitle}</option>
+     </div>
+     <br>
+     <div class="input-group" style="width: 100%;">
+      <span class="input-group-addon input-lg" style="width: 80px;">播放地址</span>
+      <input class="form-control input-lg" type="search" placeholder="输入视频页面网址" id="url">
+     </div>
+     <br>
+     <div>
+      <button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">Go</button>
+     </div>
+	 </br>
+ </div>
+    </form>
+		</tr>
+    
+	  <!--换行-->
+          </table>
+		<div class="tpt-sidebar cl">
+	<h3><center>友情连接</center></h3>
+	<ul class="tpt-e cl">
+		<volist name="tptd" id="vo">
+			<li><a target="_blank" href="{$vo.link}">{$vo.name}</a></li>
+		</volist>
+	</ul>
+</div>
+	</div>
+	
+</div>
+<include file="Index:footer"/>
+</head>
+</html>

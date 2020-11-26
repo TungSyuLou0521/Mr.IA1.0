@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>{$tpte.author} - {$tptl.title}</title>
+<meta name="keywords" content="{$tptl.keywords}"/>
+<meta name="description" content="{$tptl.description}"/>
+<link rel="stylesheet" href="__HOME__/css/simditor.css">
+<include file="Index:header"/>
+
+<!-- tpt-ml-7 tpt-mr-3 -->
+<div class="tpt-wp tpt-pat-75 cl">
+	<div class="tpt-ml-7">
+	<div class="tpt-f">
+		<div class="tpt-none-768 cl">
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_tsina1 bds_ico" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_weixin1 bds_ico" data-cmd="weixin" title="分享到微信"></a>
+			<a href="#" class="bds_qzone1 bds_ico" style="border-bottom: 0px" data-cmd="qzone" title="分享到QQ空间"></a>
+			<a href="#pinglun" class="bds_pin bds_ico2" style="margin-top: 30px;border-bottom: 0px">评论</a>
+		</div>
+		<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+	</div>
+	<div class="left3 cl">
+		<div class="content top9 cl">
+			<div class="toubu">
+				<h2>{$tptl.title}</h2>
+				<div class="toubu_span cl">
+					<span style="color:#333;">{$tptl.author}</span><span class="pipe">|</span>
+					<span>阅读：{$tptl.view}</span><span class="pipe"></span>
+					<span>发表时间：{$tptl.time|date="Y-m-d H:i:s",###}</span>
+					<span class="y"><if condition="C('WEB_URL') eq 1"><a href="__ROOT__/index/{$tpti.id}.html"><else/>
+					<a href="{:U('Home/index/category',array('id'=>$tpti['id']))}"></if>{$tpti.name}</a></span>
+				</div>
+			</div>
+			<div class="simditor cl">
+				<div class="simditor-body">
+{$content}
+				</div>
+			</div>
+			
+			
+	<fieldset class="logbtad" style="
+	border:1px dashed #FF0000; margin:10px 0px 15px 0px;padding:10px;border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;font-size:14px;">
+	<legend align="center" style="color:#FFFFFF;width:280px;padding:2px;font-size:15px;text-align:center;border-radius:8px;background-color:#FF0000">本站版权说明</legend>
+	<span style="float:left;">
+	<p style="margin-bottom:5px;">声明：本篇文章为作者独立观点，不代表本站的立场</p>
+	<p style="margin-bottom:5px;">版权：若无特殊注明，本文皆为《{$tptl.author}》原创，转载请保留文章出处。</p>
+	</span></fieldset>
+
+<div style="margin-top: 25px;"></div>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={:C('WEB_YID')}"></script>
+<!-- UY END -->
+		</div>
+	    </div>
+	</div></div>
+	<div class="tpt-mr-3">
+		<include file="Index:right"/>
+	</div>
+</div>
+<!-- NET -->
+<include file="Index:footer"/>
+</body>
+</html>
